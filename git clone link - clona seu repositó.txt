@@ -1,0 +1,9 @@
+git clone link - clona seu repositório no seu pc//primeira vez usando
+
+git pull - atualiza seu repositório//atualizar sempre
+git status - avisa se você adicionou ou se está atrasada nos commits//checar
+
+//mandar para o git
+git add . - adiciona tudo na pasta para o git
+git commit -m 'ensinando ana' - dá um nome para seus add
+git push - bota no github

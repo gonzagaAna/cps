@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+h1{
+    margin-bottom: 8%;
+}
+label{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    font-weight: 300;
+}
+input{
+    width: 70%;
+    transition: 0.3s;
+    border:none;
+    outline: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.984);
+}
+input:hover{
+    transform: scale(1.05);
+}
+.btn{
+    width: 30%;
+    margin-left: 22.5%;
+    margin-top: 25px;
+    border: none;
+    background-color: #f37f80;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+.btn:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    box-shadow: 5px 5px #0000003d;
+}
+#btnExecutar{
+    background-color: green;
+    color: aliceblue;
+}
+.formulario{
+    width: 25%;
+    box-sizing: border-box;
+}
+
+    </style>
+
+    <div class="container">
+
+        <div class="formulario">
+            <h1>Cadastro:</h1>
+            <form>
+
+                <label for="nome">Nome:</label>
+                <input type="text" class="" id="nome" placeholder="Insira seu nome" required>
+                <br>
+                <label for="email">Email:</label>
+                <input type="email" class="" id="email" placeholder="Insira seu email" required>
+                <br>
+                <label for="telefone">Telefone:</label>
+                <input type="number" class="" id="telefone" placeholder="Insira seu número de telefone" required>
+                <br>
+                <label for="endereco">Endereço:</label>
+                <input type="text" class="" id="endereco" placeholder="Insira seu endereço" required>
+    
+                <input type="submit" value="CONFIRMA" id="btn" class="btn">
+                            <p id="resposta"></p>
+    
+            </form>
+
+            <input type="button" id="btnExecutar" value="Clique aqui!!" class="btn">
+
+        </div>
+
+    </div>
+
+    <script>
+        console.log("Teste");
+
+
+        const formul = document.querySelector("form");
+        const resposta = document.getElementById("resposta");
+        formul.addEventListener("submit", (e)=>{
+            const buscaNome = formul.nome.value
+            const buscaEmail = formul.email.value
+            const buscaTel = formul.telefone.value
+            const buscaEnd = formul.endereco.value
+            resposta.innerText=`Nome: ${buscaNome}; Email: ${buscaEmail}; Telefone: ${buscaTel}; Endereço: ${buscaEnd}.`;
+            e.preventDefault() // Evita o envio do formulário do forms
+        })
+
+    </script>
+    <script src="script.js"></script>
+    
+</body>
+</html>
